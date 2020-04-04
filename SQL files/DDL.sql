@@ -90,3 +90,10 @@ CREATE TABLE public.publishers
     CONSTRAINT publishers_pkey PRIMARY KEY (email),
     CONSTRAINT bankcheck CHECK (length(bank_account::character(255)) = 10)
 )
+
+CREATE TABLE public.phone_numbers
+(
+    email character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    phonenumber numeric(7,0) NOT NULL,
+    CONSTRAINT phone_numbers_pkey PRIMARY KEY (email, phonenumber)
+)
