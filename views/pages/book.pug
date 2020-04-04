@@ -1,0 +1,49 @@
+doctype html
+script.
+    const book_info = !{jsStringify(book)}
+    const user_info = !{jsStringify(session.user)}
+
+html
+    head
+        title= book.title + "'s  page"
+
+    body
+        include ../partials/header
+        br
+
+        style.
+            p1 {
+                font-size: 32px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 16px;
+            }
+
+        p1= book.title
+        br
+        br
+
+        div(class="book_div")
+            p#pages= "Total Pages: " + book.nb_of_pages
+        div(class="book_div")
+            p#author= "Author: " + book.author
+        div(class="book_div")
+            p#publisher= "Publisher: " + book.publisher
+        div(class="book_div")
+            p= "Summary: " + book.summary
+        div(class="book_div")
+            p#isbn= "ISBN: " + book.isbn
+        div(class="book_div")
+            p#price= "Price: $" + book.price
+        div(class="book_div")
+            p#genre= "Genre: " + book.genre
+
+
+        if session.loggedin
+            if session.user !== 'admin'
+                input(type="button", onclick="submit()" value="Add to Cart")
+            if session.user === 'admin'
+                input(type="button", onclick="remove()" value="Remove from catalogue")
+
+            script(src="/js/scripts.js")

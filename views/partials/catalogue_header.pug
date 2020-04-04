@@ -1,0 +1,22 @@
+div#header
+
+    form#login(method='GET' action='/catalogue')
+        p Search book
+        label(for='title') Title:
+        input#title.form-control(type='text', placeholder='Enter title', name="title")
+        br
+        label(for='ISBN') ISBN:
+        input#ISBN.form-control(type='text', placeholder='Enter ISBN', name="isbn")
+        br
+        label(for='author') Author:
+        input#author.form-control(type='text', placeholder='Enter Author\'s name', name="author")
+        br
+
+        label(for='genre') Genre:
+        input#genre.form-control(type='text', placeholder='Enter Genre', name="genre")
+        br
+        button#bookBtn(type='submit') Go
+
+
+
+

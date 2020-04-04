@@ -1,0 +1,16 @@
+html
+	head
+		title Book Store
+	
+	body
+		//includes header template
+		include ../partials/header
+
+		h1 Welcome to Henry's Books
+		br
+		br
+
+
+		if errormessage
+			script(type="text/javascript", charset="utf-8").
+				alert("#{errormessage}")

@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= 'User\'s Cart'
+
+    body
+        include ../partials/header
+        br
+
+        style.
+            p1 {
+                font-size: 32px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 16px;
+            }
+
+        //p1= "Profile for " + user
+        br
+
+        //If user owns profile being displayed, show privacy settings
+        if orders.length > 0
+        | Order History:
+        br
+        br
+
+        table(style='width:100%', border='1')
+            tr
+                th Order ID
+                th Date of Purchase
+            for order in orders
+                tr
+                    td !{order.order_id}
+                    td !{order.date_of_purchase}
+
+script(src="/js/scripts.js")
+

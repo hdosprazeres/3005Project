@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        title= "User's page"
+
+    body
+        include ../partials/header
+        br
+        style
+            include ../../public/css/styles.css
+
+
+
+        p1 Admin's Menu
+        form(method='GET' action='/addbook')
+            button#bookBtn(type='submit') Add Books
+        form(method='GET' action='/publishers')
+            button#pubBtn(type='submit', class='btn btn-default') Edit Publishers
+        if session.loggedin
+
+
+            p= "Sales by Genre: "
+            table(id='tab')
+                tr
+                    th Genre
+                    th Sales
+                for data in session.total_genre
+                    tr
+                        td !{data.genre}
+                        td $!{data.total_genre}
+            p= 'Sales by Author: '
+            table(id='tab')
+                tr
+                    th Author
+                    th Sales
+                for data in session.total_author
+                    tr
+                        td !{data.author}
+                        td $!{data.total_author}
+
+            p= "Total Revenue: $" + session.total_sales.total_revenue
+
+        else
+            if errormessage
+                script(type="text/javascript", charset="utf-8").
+                    alert("#{errormessage}")
+
+        script(src="/js/scripts.js")

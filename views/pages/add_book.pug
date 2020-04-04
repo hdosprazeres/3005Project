@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title List of Books
+    body
+        include ../partials/header
+        include ../partials/catalogue_header_admin
+        style.
+            p {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p1 {
+                font-size: 50px;
+                font-weight: 250;
+                color: red;
+            }
+        p1= "Fill boxes to add book"
+        if errormessage
+            script(type="text/javascript", charset="utf-8").
+                alert("#{errormessage}")

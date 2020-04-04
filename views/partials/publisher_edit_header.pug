@@ -1,0 +1,19 @@
+div#header
+    style.
+        formfield * {
+            vertical-align: middle;
+        }
+    if session.user === 'admin'
+        br
+        br
+        form#login(method='POST' action='/publishers/edit')
+            label(for='bankacc') Bank Account:
+
+            input#genre.form-control(type='text', placeholder=`${publishers.bank_account}`, name="bankacc")
+            br
+
+            button#bookBtn(type='submit') Edit Publisher
+
+
+
+

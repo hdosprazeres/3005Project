@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title List of Books
+    body
+
+        include ../partials/header
+        if session.user !== 'admin'|| session.user === undefined
+            include ../partials/catalogue_header
+        if session.user === 'admin'
+            include ../partials/catalogue_header_admin
+
+        style.
+            p{
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+        if books.length < 1
+            p Nothing matches your search.
+        else
+            p List of Books:
+            //Shows only users with public profiles.
+            if books.length > 0
+                each u in books
+                    a(href="/book/" + u["isbn"])= u.title
+                    br

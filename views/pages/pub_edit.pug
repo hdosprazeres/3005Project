@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title Publisher Detailed Page
+    body
+        include ../partials/header
+        include ../partials/publisher_edit_header
+        style.
+            p{
+                font-size: 16px;
+                font-weight: 700;
+            }
+        if errormessage
+            script(type="text/javascript", charset="utf-8").
+                alert("#{errormessage}")

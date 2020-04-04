@@ -1,0 +1,44 @@
+div#header
+    style.
+        formfield * {
+            vertical-align: middle;
+        }
+    form#login(method='POST' action='/catalogue')
+        p Add Book
+        label(for='ISBN') ISBN:
+        input#ISBN.form-control(type='text', placeholder='Enter ISBN', name="isbn")
+        br
+        label(for='title') Title:
+        input#title.form-control(type='text', placeholder='Enter title', name="title")
+        br
+        label(for='author') Author:
+        input#author.form-control(type='text', placeholder='Enter Author\'s name', name="author")
+        br
+
+        label(for='genre') Pages:
+        input#pages.form-control(type='text', placeholder='Enter # of pages', name="pages")
+        br
+        formfield
+            label(for='genre') Summary:
+            textarea#summary.form-control(type='text',rows = '5',cols = '60', placeholder='Enter Summary', name="summary")
+            br
+        label(for='publisher') Publisher:
+
+        input#publisher.form-control(type='text', placeholder='Enter Publisher\'s email', name="publisher")
+        br
+
+        label(for='price') Price:
+
+        input#price.form-control(type='text', placeholder='Enter Price', name="price")
+        br
+
+        label(for='genre') Genre:
+
+        input#genre.form-control(type='text', placeholder='Enter Genre', name="genre")
+        br
+        button#bookBtn(type='submit') Add Book
+
+
+
+
+

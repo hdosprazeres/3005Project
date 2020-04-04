@@ -1,0 +1,33 @@
+div#header
+    style.
+        formfield * {
+            vertical-align: middle;
+        }
+
+    style
+        include ../../public/css/styles.css
+
+    if session.user === 'admin'
+        form#login(method='POST' action='/publishers')
+            p Add Publisher
+            label(for='email') E-mail:
+            input#title.form-control(type='text', placeholder='Enter e-mail', name="email")
+            br
+            label(for='publisher') Publisher Name:
+
+            input#ISBN.form-control(type='text', placeholder='Enter publisher name', name="publisher")
+            br
+            label(for='address') Address:
+
+            input#author.form-control(type='text', placeholder='Enter Publisher\'s address', name="address")
+            br
+            label(for='bankacc') Bank Account:
+
+            input#genre.form-control(type='text', placeholder='Enter Bank Account', name="bankacc")
+            br
+
+            button#bookBtn(type='submit') Add Publisher
+
+
+
+

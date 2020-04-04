@@ -1,0 +1,27 @@
+div#header
+    style
+        include ../../public/css/styles.css
+
+    a(href="/") Home
+    |
+
+    a(href="/catalogue")  - Catalogue
+    |
+
+    a(href="/cart")  - Cart
+    br
+    br
+    if !session.loggedin
+        form#login(method='POST' action='/login')
+            label(for='email') Email:
+            input#email.form-control(type='text', placeholder='email', name="email")
+            label(for='pw') Password:
+            input#pw.form-control(type='text', placeholder='password', name = "password")
+            button(type="submit") Login
+    else
+        p(font-weight=700)
+        | Welcome #{session.user}
+        a(href='/users/' + session.user) ,click here for advanced menu.
+        form#logout(method='GET' action='/logout')
+            button#outbutton(type='submit') Logout
+
