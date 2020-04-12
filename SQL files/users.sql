@@ -9,3 +9,7 @@ INSERT INTO public.users(
 INSERT INTO public.users(
 	first_name, last_name, email, billing_address)
 	VALUES ('John', 'Mclane', 'yipee@gmail.com', 'Where terrorists are');
+
+INSERT INTO public.users(
+	first_name, last_name, email, billing_address)
+	VALUES ('admin', 'admin', 'admin', 'admin');
