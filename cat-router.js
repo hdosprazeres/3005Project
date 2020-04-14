@@ -31,17 +31,17 @@ function queryParser(req, res, next){
                 if (i<j){
                     if(key !== 'isbn'){
 
-                        req.sql_query += `LOWER(${key}) like %${value}% and `
+                        req.sql_query += `LOWER(${key}) like %${value.toLowerCase()}% and `
                     }else{
-                        req.sql_query += `${key}::varchar(255) like '%${value}%' and `
+                        req.sql_query += `${key}::varchar(255) like '%${value.toLowerCase()}%' and `
                     }
                 }else{
 
                     if(key !== 'isbn'){
 
-                        req.sql_query += `LOWER(${key}) like '%${value}%'`
+                        req.sql_query += `LOWER(${key}) like '%${value.toLowerCase()}%'`
                     }else{
-                        req.sql_query += `${key}::varchar(255) like '%${value}%'`
+                        req.sql_query += `${key}::varchar(255) like '%${value.toLowerCase()}%'`
                     }
 
                 }
