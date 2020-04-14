@@ -12,7 +12,7 @@ INSERT INTO public.users(
 
 INSERT INTO public.users(
 	first_name, last_name, email, billing_address,password)
-	VALUES ('John', 'Mclane', 'yipee@gmail.com', 'Where terrorists are','jmclane');
+	VALUES ('John', 'Mclane', 'yippee@gmail.com', 'Where terrorists are','jmclane');
 
 INSERT INTO public.users(
 	first_name, last_name, email, billing_address,password)
