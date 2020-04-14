@@ -1,22 +1,22 @@
 INSERT INTO public.publishers(
-	email, publisher_name, address, bank_account)
+	email, publisher_name, address, bank_account,password)
 	VALUES ('oreilly@gmail.com', 'WeRock', 'winchestertonfieldville', 4932059484);
 
 INSERT INTO public.users(
-	first_name, last_name, email, billing_address)
-	VALUES ('Justin', 'Biba', 'JB19@gmail.com', 'Where money is');
+	first_name, last_name, email, billing_address,password)
+	VALUES ('Justin', 'Biba', 'JB19@gmail.com', 'Where money is','biba4eve');
 
 INSERT INTO public.users(
-	first_name, last_name, email, billing_address)
-	VALUES ('Samuel', 'Jackson', 'mudafucka@gmail.com', 'I take whatever role');
+	first_name, last_name, email, billing_address,password)
+	VALUES ('Samuel', 'Jackson', 'mudafucka@gmail.com', 'I take whatever role','didistut');
 
 INSERT INTO public.users(
-	first_name, last_name, email, billing_address)
-	VALUES ('John', 'Mclane', 'yipee@gmail.com', 'Where terrorists are');
+	first_name, last_name, email, billing_address,password)
+	VALUES ('John', 'Mclane', 'yipee@gmail.com', 'Where terrorists are','jmclane');
 
 INSERT INTO public.users(
-	first_name, last_name, email, billing_address)
-	VALUES ('admin', 'admin', 'admin', 'admin');
+	first_name, last_name, email, billing_address,password)
+	VALUES ('admin', 'admin', 'admin', 'admin','admin');
 
 insert into books(isbn,title,author,nb_of_pages,summary,publisher,price,genre)
 
