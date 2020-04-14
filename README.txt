@@ -1,10 +1,17 @@
 Setting it up:
 
-Make sure the database is initialized and the server.js file is set up with
+1.Make sure the database is initialized and the server.js file is set up with
 the proper database settings:
     Port
     Database name
     Password
+
+2.Copy and paste DDL.sql commands into PostgreSQL query tool.
+
+3.Copy and paste Trigger_Functions.sql and Triggers.sql contents into PostgreSQL query tool.
+
+4.Copy and paste sampledata.sql commands into PostgreSQL query tool.
+
 
 Starting it up:
     1.The server should be started through nodemon package. To make sure all

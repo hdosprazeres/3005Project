@@ -4,14 +4,15 @@ CREATE FUNCTION public.check_pub()
     COST 100
     VOLATILE NOT LEAKPROOF
 AS $BODY$BEGIN
-if exists(select publisher_name from publishers
-where publisher_name = new.publisher)
+if exists(select email from publishers
+where email = new.publisher)
 then return new;
-else 
+else
 return null;
 end if;
 END;
 $BODY$;
+
 
 CREATE FUNCTION public.insert_published_by()
     RETURNS trigger
